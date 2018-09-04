@@ -23,7 +23,7 @@ class Hangman {
         }        
     }
 
-    getStatus() {
+    get statusMessage() {
         if (this.status === "playing")
         {
             return `Guesses left: ${this.remainingGuesses}`;
@@ -38,7 +38,7 @@ class Hangman {
         }        
     }
 
-    getPuzzle() {
+    get puzzle() {
         let asterisks = '';
         this.word.forEach(letter => {
             asterisks = this.guessedLetters.includes(letter) || letter == ' ' ? asterisks += letter : asterisks += "*";
