@@ -9,10 +9,12 @@ window.addEventListener("keypress", (e) => {
 });
 
 const render = () => {
-    puzzle_element.textContent = game1.puzzle;
+    puzzle_element.innerHTML = '';
     guesses_element.textContent = game1.statusMessage;
+    game1.puzzle.split('').forEach(letter => {
+        puzzle_element.innerHTML += `<span>${letter}</span>`;
+    });
 }
-
 const startGame = async () => {
     const puzzle = await getPuzzle("1");
     game1 = new Hangman(puzzle, 5);
