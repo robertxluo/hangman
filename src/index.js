@@ -5,7 +5,7 @@ const puzzle_element = document.querySelector("#puzzle");
 const guesses_element = document.querySelector("#guesses");
 let game1;
 
-window.addEventListener("keypress", (e) => {
+window.addEventListener("keydown", (e) => {
     const guess = e.key;
     game1.makeGuess(guess);
     render();
@@ -20,7 +20,7 @@ const render = () => {
 }
 const startGame = async () => {
     const puzzle = await getPuzzle("1");
-    game1 = new Hangman(puzzle, 5);
+    game1 = new Hangman(puzzle, 10);
     render();
 }
 
