@@ -5,7 +5,7 @@ const puzzle_element = document.querySelector("#puzzle");
 const guesses_element = document.querySelector("#guesses");
 let game1;
 
-window.addEventListener("keydown", (e) => {
+window.addEventListener("keypress", (e) => {
     const guess = e.key;
     game1.makeGuess(guess);
     render();
