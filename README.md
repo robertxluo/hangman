@@ -1,3 +1,3 @@
 # hangman
 
-[Live demo](https://robert-hangman.netlify.com/)
+[Live demo](https://hangman.robertluo.net/)
